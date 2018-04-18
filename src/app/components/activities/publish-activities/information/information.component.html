@@ -1,0 +1,50 @@
+<div class="step1">
+  <el-form [show-icon]="true" [show-message]="true" >
+    <el-form-item label="活动名称" required="true">
+      <el-input size="large"></el-input>
+    </el-form-item>
+
+    <el-form-item label="" required="true">
+      <div el-row style="height: 35px;" type="flex" align="middle">
+        <div el-col [span]="3" style="width: 90px;">
+          <div class="el-form-item__label" style="padding-bottom: 0;"> 活动分类</div>
+        </div>
+        <div el-col [span]="2">
+          <el-button type="text" style="margin: 0;padding: 0;">设置</el-button>
+        </div>
+      </div>
+      <el-radio-group>
+        <el-radio *ngFor="let item of information.fenlies" label="{{item.label}}">{{item.name}}</el-radio>
+      </el-radio-group>
+    </el-form-item>
+
+    <el-form-item label="活动标签" required="true">
+      <div el-row type="flex" class="tag-div">
+        <div el-col [span]="24">
+          <el-tag [closable]="true" type="primary">你好</el-tag>
+          <el-tag [closable]="true" type="primary">你好1</el-tag>
+          <el-tag [closable]="true" type="primary">你好2</el-tag>
+          <el-button icon="plus" (click)="showDialog()" size="large" style="vertical-align: middle;margin: 10px;"></el-button>
+        </div>
+      </div>
+
+    </el-form-item>
+
+
+  </el-form>
+
+  <el-dialog title="添加活动标签" [visible]="tagDialogvisible" top="35%">
+    <el-form>
+      <el-form-item>
+        <el-input auto-complete="off"></el-input>
+      </el-form-item>
+      <span class="dialog-footer">
+          <el-button >取 消</el-button>
+          <el-button type="primary">添加</el-button>
+      </span>
+    </el-form>
+  </el-dialog>
+
+
+
+</div>

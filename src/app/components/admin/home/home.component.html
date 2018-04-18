@@ -1,0 +1,22 @@
+<body>
+<app-header [headerTitle]="headerTitle"></app-header>
+<div class="page-content">
+  <div class="row">
+    <app-nav></app-nav>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-12 panel-info">
+          <div class="content-box-header">
+            <div class="panel-title ">{{boxTitle}}</div>
+          </div>
+          <div class="content-box-large box-with-header">
+            <div>
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

@@ -1,0 +1,30 @@
+<div el-container direction="vertical" class="app-box">
+  <div el-header height="65px">
+    <el-menu model="2" mode="horizontal" >
+      <el-menu-item index="1">高级插件</el-menu-item>
+      <el-menu-item index="2">在线商城</el-menu-item>
+      <el-menu-item index="3">客户管理</el-menu-item>
+      <el-menu-item index="4">系统设置</el-menu-item>
+      <el-menu-item index="5">活动发布</el-menu-item>
+    </el-menu>
+  </div>
+
+  <div class="clear-fixed"></div>
+
+  <div el-main>
+
+    <div class="main-left">
+      <el-menu [model]="urlModel" (modelChange)="handle($event)">
+        <el-menu-item index="activities/publish">活动发布</el-menu-item>
+        <el-menu-item index="activities/management">活动管理</el-menu-item>
+      </el-menu>
+    </div>
+
+    <div class="main-right" >
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</div>
+

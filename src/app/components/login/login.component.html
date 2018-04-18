@@ -1,0 +1,50 @@
+<body class="login-bg">
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Logo -->
+        <div class="logo">
+          <h1><a href="javascript:void(0)">Bootstrap Admin Theme</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-content container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="login-wrapper">
+
+        <form [formGroup]="loginForm" (ngSubmit) = "auth()">
+          <div class="box">
+            <div class="content-wrap">
+              <h6>Sign In</h6>
+              <input class="form-control" type="text" formControlName="username" placeholder="E-mail address" required>
+              <input class="form-control" type="password" formControlName="password"  placeholder="Password">
+              <div class="action">
+                <button type="submit" class="btn btn-primary signup" [disabled]="loginForm.pristine">Login</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="already">
+          {{authUser?.id}}
+          {{authUser?.username}}
+          {{authUser?.password}}
+          {{authUser?.firstName}}
+          {{authUser?.lastName}}
+          <p>Don't have an account yet?</p>
+          <a routerLink="/register">Sign Up</a>
+          <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+          <router-outlet></router-outlet>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
