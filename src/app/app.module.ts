@@ -11,8 +11,9 @@ import { QuestionsService } from './services/questions.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
-import { ElModule } from "element-angular/release/element-angular.module";
-import { ActivitiesModule } from "./components/activities/activities.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgZorroAntdModule} from "ng-zorro-antd";
+import {AdminModule} from "./components/admin/admin.module";
 
 
 @NgModule({
@@ -25,20 +26,13 @@ import { ActivitiesModule } from "./components/activities/activities.module";
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ActivitiesModule,
-    ElModule.forRoot(),
+    BrowserAnimationsModule,
+    AdminModule,
+    NgZorroAntdModule.forRoot(),
     RouterModule.forRoot([
-
-      // { path: '', redirectTo: 'login', pathMatch: 'full' },
-      // { path: 'login', component: LoginComponent},
-      // { path: 'register', component: RegisterComponent},
-      // {
-      //   path: 'admin',
-      //   loadChildren: './components/admin/admin.module#AdminModule'
-      // },
       {
-        path: 'activities',
-        loadChildren: ()=> ActivitiesModule
+        path: 'home',
+        loadChildren: ()=> AdminModule
       },
       {
         path: '**',

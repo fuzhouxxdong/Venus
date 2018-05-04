@@ -4,7 +4,7 @@ import {HomeComponent} from '../home/home.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.styl']
 })
 export class DashboardComponent implements OnInit {
 

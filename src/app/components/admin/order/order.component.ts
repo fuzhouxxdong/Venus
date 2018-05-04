@@ -4,7 +4,7 @@ import {HomeComponent} from '../home/home.component';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.css']
+  styleUrls: ['./order.component.styl']
 })
 export class OrderComponent implements OnInit {
 

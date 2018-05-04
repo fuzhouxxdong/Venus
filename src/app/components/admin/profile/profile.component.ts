@@ -4,7 +4,7 @@ import {HomeComponent} from '../home/home.component';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.styl']
 })
 export class ProfileComponent implements OnInit {
 
